@@ -1,28 +1,28 @@
 # Serverless Hotdog Detector
 
-This example shows you how to build a [serverless](https://aws.amazon.com/serverless/#getstarted) hotdog detecting Slack app on AWS using [Amazon API Gateway](https://aws.amazon.com/api-gateway/), [AWS Lambda](https://aws.amazon.com/lambda/), and [Amazon Rekognition](https://aws.amazon.com/rekognition/).
+This example shows you how to build a [serverless](https://aws.amazon.com/serverless/#getstarted) hotdog detecting chat app on AWS using [Amazon API Gateway](https://aws.amazon.com/api-gateway/), [AWS Lambda](https://aws.amazon.com/lambda/), and [Amazon Rekognition](https://aws.amazon.com/rekognition/).
 
-This example is intended to work with [Slack](https://slack.com/), but could also be modified to work with other popular chat apps such as [Facebook Messenger](https://www.messenger.com/).
+This example is intended to integrate with [Slack](https://slack.com/), but could also be modified to work with other popular chat apps such as [Facebook Messenger](https://www.messenger.com/).
 
-This repository contains sample code for all the Lambda functions depicted in the diagram below as well as an [AWS CloudFormation](https://aws.amazon.com/cloudformation/) template for creating the functions and related resources.
+This repository contains sample code the Lambda function depicted in the diagram below as well as an [AWS CloudFormation](https://aws.amazon.com/cloudformation/) template for creating the function and related resources.
 
 To see some of the other real-world examples of Rekognition in action check out the [Image Recognition and Processing Backend Serverless reference architecture](https://github.com/awslabs/lambda-refarch-imagerecognition)
 
 ![testing of example gif](images/TestingExample.gif)
 
 ## Walkthrough of the Architecture
-1. A user posts a message containing the image to classify to a chat app channel that’s monitored by the chatbot.
-1. The chat app posts the event to an Amazon API Gateway API for the chatbot.
-1. The chatbot validates the event. This event triggers an AWS Lambda function that downloads the image.
+1. A user posts a message containing the image to perform hotdog detection on in a channel monitored by the chat app.
+1. The chat app posts the message to an Amazon API Gateway API for the chat app.
+1. The API invokes the app Lambda function and downloads the image contained in the message.
 1. Amazon Rekognition’s image recognition and labelling feature scans the image and returns a list of detected labels.
-1. The chatbot checks the list for labels corresponding to hotdogs to determine if the image contained a hotdog.
-1. The chatbot uses the chat app API to post a message to the chat channel detailing whether the image was a hotdog or not.
+1. The chat app checks the list for labels corresponding to hotdogs to determine if the image contained a hotdog.
+1. The chat app posts a message to the chat channel detailing whether the image was a hotdog or not.
 
 ![screenshot for instruction](images/Architecture.png)
 
 ## Running the Example
 ### Preparing Slack
-First make sure you're logged in to Slack, then follow these instructions to prep your bot:
+First make sure you're logged in to Slack, then follow these instructions to prep your app:
 1. [Create an app](https://api.slack.com/apps?new_app=1) ([Documentation](https://api.slack.com/slack-apps#creating_apps))
 1. From the `Basic Information` tab under `Settings` take note of the `Verification Token` as it will be required later
 1. Navigate to the `OAuth & Permissions` tab under `Features`
@@ -34,12 +34,12 @@ First make sure you're logged in to Slack, then follow these instructions to pre
 1. Click `Save Changes`
 1. Click `Install App to Team` then `Authorize` then note the `OAuth Access Token` as it will be required later
 
-### Launching the Bot Backend on AWS
+### Launching the App Backend on AWS
 #### Option 1: Launch the CloudFormation Template in US West - Oregon (us-west-2)
 The backend infrastructure can be deployed in US West - Oregon (us-west-2) using the provided CloudFormation template.
 Click **Launch Stack** to launch the template in the US West - Oregon (us-west-2) region in your account:
 
-[![Launch Stack into Oregon with CloudFormation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/cloudformation-launch-stack-button.png)](https://console.aws.amazon.com/cloudformation/home?region=us-west-2#/stacks/new?stackName=ImageModerationChatbot&templateURL=https://s3.amazonaws.com/hotdog-detector-chatbot/hotdog_detector.output.yaml)
+[![Launch Stack into Oregon with CloudFormation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/cloudformation-launch-stack-button.png)](***REPLACE_THIS_VALUE***)
 
 (On the last page of the wizard, make sure to:
 
@@ -106,7 +106,7 @@ The following sections explain all of the resources created by the CloudFormatio
 - **LambdaRekognitionRole** - IAM Role with policy that allows Lambda function to invoke "rekognition:DetectLabels" API call and write log messages to CloudWatch Logs.
 
 ### Amazon API Gateway
-- **HotdogDetectorAPI:** - API for image moderation chatbot
+- **HotdogDetectorAPI:** - API for hotdog detector app
 - **HotdogDetectorAPIProdStage** - Implicitly created production stage for API
 - **HotdogDetectorAPIDeploymentXXXXXXXXX** - Implicitly created deployment for production stage of API
 
