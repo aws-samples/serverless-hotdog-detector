@@ -1,4 +1,4 @@
-# Serverless Hotdog Connector
+# Serverless Hotdog Detector
 
 This example shows you how to build a [serverless](https://aws.amazon.com/serverless/#getstarted) hotdog detecting chatbot on AWS using [Amazon API Gateway](https://aws.amazon.com/api-gateway/), [AWS Lambda](https://aws.amazon.com/lambda/), and [Amazon Rekognition](https://aws.amazon.com/rekognition/).
 
