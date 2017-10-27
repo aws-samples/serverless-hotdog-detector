@@ -1,6 +1,6 @@
 # Serverless Hotdog Detector
 
-This example shows you how to build a [serverless](https://aws.amazon.com/serverless/#getstarted) hotdog detecting chatbot on AWS using [Amazon API Gateway](https://aws.amazon.com/api-gateway/), [AWS Lambda](https://aws.amazon.com/lambda/), and [Amazon Rekognition](https://aws.amazon.com/rekognition/).
+This example shows you how to build a [serverless](https://aws.amazon.com/serverless/#getstarted) hotdog detecting Slack app on AWS using [Amazon API Gateway](https://aws.amazon.com/api-gateway/), [AWS Lambda](https://aws.amazon.com/lambda/), and [Amazon Rekognition](https://aws.amazon.com/rekognition/).
 
 This example is intended to work with [Slack](https://slack.com/), but could also be modified to work with other popular chat apps such as [Facebook Messenger](https://www.messenger.com/).
 
