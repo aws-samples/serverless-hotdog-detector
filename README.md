@@ -39,7 +39,7 @@ First make sure you're logged in to Slack, then follow these instructions to pre
 The backend infrastructure can be deployed in US West - Oregon (us-west-2) using the provided CloudFormation template.
 Click **Launch Stack** to launch the template in the US West - Oregon (us-west-2) region in your account:
 
-[![Launch Stack into Oregon with CloudFormation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/cloudformation-launch-stack-button.png)](***REPLACE_THIS_VALUE***)
+[![Launch Stack into Oregon with CloudFormation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/cloudformation-launch-stack-button.png)](https://console.aws.amazon.com/cloudformation/home?region=us-west-2#/stacks/new?stackName=HotdogDetector&templateURL=https://s3-us-west-2.amazonaws.com/aws-samples-hotdog-detector/hotdog_detector.output.yaml)
 
 (On the last page of the wizard, make sure to:
 
