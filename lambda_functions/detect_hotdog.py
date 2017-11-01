@@ -5,7 +5,6 @@ import boto3
 SUPPORTED_TYPES = ['image/jpeg', 'image/jpg', 'image/png']  # Supported image types
 MAX_SIZE = 5242880  # Max number of image bytes supported by Amazon Rekognition (5MiB)
 MIN_CONFIDENCE = 80.0  # Confidence interval for image labels
-MAX_LABELS = 5  # Max number of labels to classify image with
 
 VERIFICATION_TOKEN = os.environ['VERIFICATION_TOKEN']  # Slack verification token from environment variables
 ACCESS_TOKEN = os.environ['ACCESS_TOKEN']  # Slack OAuth access token from environment variables
@@ -131,8 +130,7 @@ def detect_hotdog(image_bytes):
             Image={
                 'Bytes': image_bytes,
             },
-            MinConfidence=MIN_CONFIDENCE,
-            MaxLabels=MAX_LABELS
+            MinConfidence=80.0
         )
     except Exception as e:
         print(e)
