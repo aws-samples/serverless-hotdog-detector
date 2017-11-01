@@ -11,12 +11,12 @@ To see some of the other real-world examples of Rekognition in action check out 
 ![testing of example gif](images/TestingExample.gif)
 
 ## Walkthrough of the Architecture
-1. A user posts a message containing the image to perform hotdog detection on in a channel monitored by the chat app.
-1. The chat app posts the message to an Amazon API Gateway API for the chat app.
-1. The API invokes the app Lambda function and downloads the image contained in the message.
-1. Amazon Rekognition’s image recognition and labelling feature scans the image and returns a list of detected labels.
-1. The chat app checks the list for labels corresponding to hotdogs to determine if the image contained a hotdog.
-1. The chat app posts a message to the chat channel detailing whether the image was a hotdog or not.
+1. A user posts a message containing the image to perform hotdog detection on in a Slack channel monitored by the chat app.
+1. Slack posts the message to an Amazon API Gateway API for the chat app.
+1. The API triggers an invocation of the chat app Lambda function which performs the following:
+  1. Amazon Rekognition’s image recognition and labelling feature scans the image and returns a list of detected labels.
+  1. The list of labels is checked for those corresponding to hotdogs to determine if the image contained a hotdog.
+  1. A message is posted to the chat channel detailing whether the image was a hotdog or not.
 
 ![screenshot for instruction](images/Architecture.png)
 
