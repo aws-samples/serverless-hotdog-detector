@@ -1,8 +1,8 @@
 # Serverless Hotdog Detector
 
-This example shows you how to build a [serverless](https://aws.amazon.com/serverless/#getstarted) hotdog detecting chat app on AWS using [Amazon API Gateway](https://aws.amazon.com/api-gateway/), [AWS Lambda](https://aws.amazon.com/lambda/), and [Amazon Rekognition](https://aws.amazon.com/rekognition/).
+This example shows you how to build a [serverless](https://aws.amazon.com/serverless/#getstarted) [hotdog detecting app](https://www.youtube.com/watch?v=ACmydtFDTGs) on AWS using [Amazon API Gateway](https://aws.amazon.com/api-gateway/), [AWS Lambda](https://aws.amazon.com/lambda/), and [Amazon Rekognition](https://aws.amazon.com/rekognition/).
 
-This example is intended to integrate with [Slack](https://slack.com/), but could also be modified to work with other popular chat apps such as [Facebook Messenger](https://www.messenger.com/).
+This example is intended to integrate with [Slack](https://slack.com/) as the application frontend but could easily be modified to work with your own web or mobile application frontend.
 
 This repository contains sample code the Lambda function depicted in the diagram below as well as an [AWS CloudFormation](https://aws.amazon.com/cloudformation/) template for creating the function and related resources.
 
@@ -84,7 +84,7 @@ aws cloudformation deploy --region $REGION --template-file hotdog_detector.outpu
 
 
 ## Testing the Example
-To test the example go to the Slack team you configured the Slack app for and try uploading images of different foods to see the results.
+To test the example open your Slack app and navigate to a channel for the team you configured the Slack app on, then try uploading pictures of different foods to see the app in action.
 
 
 ## Cleaning Up the Stack Resources
