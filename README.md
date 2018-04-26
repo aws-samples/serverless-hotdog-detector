@@ -103,7 +103,7 @@ The following sections explain all of the resources created by the CloudFormatio
 - **HotdogDetectorFunctionHotdogDetectorAPIPostPermissionProd** - Implicitly created Lambda permission, allows API Gateway Prod stage to call Lambda function.
 
 ### AWS IAM
-**HotdogDetectorFunctionRole** - Implicitly created IAM Role with policy that allows Lambda function to invoke "rekognition:DetectLabels" and "rekognition:DetectModerationLabels" API calls and write log messages to CloudWatch Logs.
+- **HotdogDetectorFunctionRole** - Implicitly created IAM Role with policy that allows Lambda function to invoke "rekognition:DetectLabels" and "rekognition:DetectModerationLabels" API calls and write log messages to CloudWatch Logs.
 
 ### Amazon API Gateway
 - **HotdogDetectorAPI:** - API for hotdog detector app
