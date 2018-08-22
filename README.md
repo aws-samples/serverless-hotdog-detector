@@ -38,7 +38,7 @@ First make sure you're logged in to Slack, then follow these instructions to pre
 #### Option 1: Launch from Serverless Application Repository - Any Supported Region
 This app can be launched into any region that supports the underlying services from the [Serverless Application Repository](https://aws.amazon.com/serverless/serverlessrepo/) using the instructions below:
 
-1. Navigate to the [application details page](https://serverlessrepo.aws.amazon.com/applications/arn:aws:serverlessrepo:us-east-1:426111819794:applications~hotdog-detector) for the chatbot.
+1. Navigate to the [application details page](https://serverlessrepo.aws.amazon.com/applications/arn:aws:serverlessrepo:us-east-1:426111819794:applications~hotdog-detector) for the app.
 1. Click `Deploy`
 1. From the region dropdown in the top right ensure you have the desired region to deploy into selected
 1. Input the appropriate application parameters under `Configure application parameters`
