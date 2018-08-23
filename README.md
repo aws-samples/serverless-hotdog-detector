@@ -35,7 +35,7 @@ First make sure you're logged in to Slack, then follow these instructions to pre
 1. Click `Install App to Team` then `Authorize` then note the `OAuth Access Token` as it will be required later
 
 ### Launching the App Backend on AWS
-#### Option 1: Launch from Serverless Application Repository - Any Supported Region
+#### Option 1: Launch from Serverless Application Repository
 This app can be launched into any region that supports the underlying services from the [Serverless Application Repository](https://aws.amazon.com/serverless/serverlessrepo/) using the instructions below:
 
 1. Navigate to the [application details page](https://serverlessrepo.aws.amazon.com/applications/arn:aws:serverlessrepo:us-east-1:426111819794:applications~hotdog-detector) for the app.
