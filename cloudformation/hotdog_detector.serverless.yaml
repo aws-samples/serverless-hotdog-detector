@@ -57,6 +57,7 @@ Resources:
       Description: Checks Slack message.channels events for images. If an image is found uses Rekognition to determine if it contains a hotdog.
       Handler: detect_hotdog.lambda_handler
       Runtime: python3.6
+      Timeout: 10
       CodeUri: ../lambda_functions/
       Environment:
         Variables:
